@@ -1,34 +1,31 @@
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.local/share/nvim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
+Plug 'calebsmith/vim-lambdify'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'elmcast/elm-vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'gregsexton/MatchTag'
+Plug 'groenewege/vim-less'
+Plug 'kchmck/vim-coffee-script'
+Plug 'Lokaltog/vim-distinguished'
+Plug 'leafgarland/typescript-vim'
+Plug 'leafo/moonscript-vim'
+Plug 'mattn/emmet-vim'
+Plug 'millermedeiros/vim-esformatter'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'plasticboy/vim-markdown'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'slim-template/vim-slim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'timcharper/textile.vim'
+Plug 'tpope/vim-fugitive'
 
-Plugin 'calebsmith/vim-lambdify'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'elmcast/elm-vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'gregsexton/MatchTag'
-Plugin 'groenewege/vim-less'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'Lokaltog/vim-distinguished'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'leafo/moonscript-vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'millermedeiros/vim-esformatter'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'slim-template/vim-slim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'timcharper/textile.vim'
-Plugin 'tpope/vim-fugitive'
-
-call vundle#end()
+call plug#end()
 
 filetype plugin on
 syntax on
