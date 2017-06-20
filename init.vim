@@ -1,7 +1,6 @@
 " set the runtime path to include Vundle and initialize
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'calebsmith/vim-lambdify'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
