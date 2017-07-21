@@ -65,10 +65,12 @@ function! Preserve(cmd)
 endfunction
 
 "Custom commands
+:command Q q
+:command QA qa
+:command Qa qa
+:command W w
 :command WQ wq
 :command Wq wq
-:command W w
-:command Q q
 
 " Plugin specific
 autocmd vimenter * NERDTree
@@ -85,7 +87,7 @@ let g:NERDTreeWinSize = 36
 let g:vim_markdown_folding_disabled=1
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$|\bower_components$|\node_modules$|\vendor$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$|bower_components\|dist\|node_modules\|vendor',
   \ 'file': '\.exe$\|\.so$\|\.dat$|\.png$|\.jpg$|\.jpeg$|\.svg$|\.gif$|\.flv$|\.webm$'
   \ }
 
