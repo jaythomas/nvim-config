@@ -5,9 +5,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
-Plug 'flazz/vim-colorschemes'
 Plug 'gregsexton/MatchTag'
 Plug 'groenewege/vim-less'
+Plug 'iCyMind/NeoSolarized'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'leafo/moonscript-vim'
@@ -30,6 +30,7 @@ filetype plugin on
 syntax on
 
 " Good ol settings
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set expandtab
 set ignorecase
 set nohlsearch
@@ -41,6 +42,7 @@ set scrolloff=12
 set smartcase
 set smartindent
 set tabstop=2
+set termguicolors
 set shiftwidth=2
 
 nnoremap <BS> i
@@ -91,13 +93,6 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dat$|\.png$|\.jpg$|\.jpeg$|\.svg$|\.gif$|\.flv$|\.webm$'
   \ }
 
-set t_Co=256
-colo grb256
-
-hi ErrorMsg   ctermfg=red   ctermbg=none  guifg=White guibg=cyan gui=None
-hi WarningMsg ctermfg=white ctermbg=cyan  guifg=White guibg=cyan gui=None
-hi DiffAdd    ctermfg=green ctermbg=none
-hi DiffChange ctermfg=blue  ctermbg=none
-hi DiffDelete ctermfg=red   ctermbg=none
-hi SpellBad   ctermfg=red   ctermbg=none
-hi SellCap    ctermfg=cyan  ctermbg=none
+" Set a 24-bit color scheme
+set background=dark
+colorscheme NeoSolarized
