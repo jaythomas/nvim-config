@@ -5,6 +5,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
+Plug 'flazz/vim-colorschemes'
 Plug 'gregsexton/MatchTag'
 Plug 'groenewege/vim-less'
 Plug 'iCyMind/NeoSolarized'
@@ -94,5 +95,8 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " Set a 24-bit color scheme
-set background=dark
-colorscheme NeoSolarized
+"set background=dark
+"colorscheme NeoSolarized
+
+" 256-color scheme
+colorscheme grb256
