@@ -9,6 +9,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'gregsexton/MatchTag'
 Plug 'groenewege/vim-less'
 Plug 'iCyMind/NeoSolarized'
+Plug 'jaythomas/vim-yaml'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'leafo/moonscript-vim'
@@ -55,7 +56,14 @@ set foldlevel=5
 
 autocmd BufNewFile,BufRead *.slim set syntax=slim|set ft=slim
 
-nmap <leader>r :w <CR> :!ruby %<CR>
+" Maps
+" Keys to delete text (as opposed to cutting with D)
+nmap X "_d
+nmap XX "_dd
+vmap X "_d
+vmap x "_d
+" have x (removes single character) not go into the default registry
+nnoremap x "_x
 
 " Halve/double whitespave indentation
 nnoremap <silent> <leader>>    :call Preserve('%s/^\s*/&&/')<cr>
