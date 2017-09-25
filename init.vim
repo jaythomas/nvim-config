@@ -8,6 +8,8 @@ Plug 'elmcast/elm-vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'gregsexton/MatchTag'
 Plug 'groenewege/vim-less'
+Plug 'iCyMind/NeoSolarized' " True color theme
+Plug 'jaythomas/vim-yaml'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'leafo/moonscript-vim'
@@ -30,6 +32,7 @@ filetype plugin on
 syntax on
 
 " Good ol settings
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set expandtab
 set ignorecase
 set nohlsearch
@@ -41,6 +44,7 @@ set scrolloff=12
 set smartcase
 set smartindent
 set tabstop=2
+"set termguicolors
 set shiftwidth=2
 
 nnoremap <BS> i
@@ -52,7 +56,14 @@ set foldlevel=5
 
 autocmd BufNewFile,BufRead *.slim set syntax=slim|set ft=slim
 
-nmap <leader>r :w <CR> :!ruby %<CR>
+" Maps
+" Keys to delete text (as opposed to cutting with D)
+nmap X "_d
+nmap XX "_dd
+vmap X "_d
+vmap x "_d
+" have x (removes single character) not go into the default registry
+nnoremap x "_x
 
 " Halve/double whitespave indentation
 nnoremap <silent> <leader>>    :call Preserve('%s/^\s*/&&/')<cr>
@@ -91,8 +102,12 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dat$|\.png$|\.jpg$|\.jpeg$|\.svg$|\.gif$|\.flv$|\.webm$'
   \ }
 
-set t_Co=256
-colo grb256
+" Set a 24-bit color scheme
+"set background=dark
+"colorscheme NeoSolarized
+
+" 256-color scheme
+colorscheme grb256
 
 hi ErrorMsg   ctermfg=red   ctermbg=none  guifg=White guibg=cyan gui=None
 hi WarningMsg ctermfg=white ctermbg=cyan  guifg=White guibg=cyan gui=None
