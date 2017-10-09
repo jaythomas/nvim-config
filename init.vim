@@ -11,6 +11,7 @@ Plug 'groenewege/vim-less'
 Plug 'iCyMind/NeoSolarized' " True color theme
 Plug 'jaythomas/vim-yaml'
 Plug 'kchmck/vim-coffee-script'
+Plug 'kylef/apiblueprint.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'leafo/moonscript-vim'
 Plug 'mattn/emmet-vim'
