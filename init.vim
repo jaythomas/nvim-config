@@ -88,25 +88,32 @@ endfunction
 :command WQ wq
 :command Wq wq
 
-" Plugin specific
-autocmd vimenter * NERDTree
-autocmd vimenter * wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-let g:ale_linters = {
-  \ 'javascript': ['eslint']
-  \ }
-let g:coverage_json_report_path = 'coverage/coverage-final.json'
-let g:elm_format_autosave = 1
-let g:elm_format_fail_silently = 1
-let g:elm_syntastic_show_warnings = 1
+" NERDTree
+"autocmd vimenter * NERDTree " Auto-start NERDtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Auto-close vim if NERDTree's buffer is the only one open
 let g:NERDTreeWinSize = 36
-let g:vim_markdown_folding_disabled=1
 
+" ctrl-p
+autocmd vimenter * wincmd p
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$|bower_components\|dist\|node_modules\|vendor',
   \ 'file': '\.exe$\|\.so$\|\.dat$|\.png$|\.jpg$|\.jpeg$|\.svg$|\.gif$|\.flv$|\.webm$'
   \ }
+
+
+"ALE
+let g:ale_linters = {
+  \ 'javascript': ['eslint']
+  \ }
+let g:coverage_json_report_path = 'coverage/coverage-final.json'
+
+" vim-elm
+let g:elm_format_autosave = 1
+let g:elm_format_fail_silently = 1
+let g:elm_syntastic_show_warnings = 1
+
+" vim-markdown
+let g:vim_markdown_folding_disabled=1
 
 " Set a 24-bit color scheme
 "set background=dark
