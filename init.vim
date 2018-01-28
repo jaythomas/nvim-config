@@ -2,6 +2,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'digitaltoad/vim-pug'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
@@ -17,7 +18,10 @@ Plug 'leafo/moonscript-vim'
 Plug 'mattn/emmet-vim'
 Plug 'millermedeiros/vim-esformatter'
 Plug 'ntpeters/vim-better-whitespace'
+"Plug 'othree/yajs.vim'
 Plug 'plasticboy/vim-markdown'
+Plug 'posva/vim-vue'
+Plug 'ruanyl/coverage.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
@@ -92,6 +96,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:ale_linters = {
   \ 'javascript': ['eslint']
   \ }
+let g:coverage_json_report_path = 'coverage/coverage-final.json'
 let g:elm_format_autosave = 1
 let g:elm_format_fail_silently = 1
 let g:elm_syntastic_show_warnings = 1
