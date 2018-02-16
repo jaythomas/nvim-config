@@ -87,6 +87,7 @@ endfunction
 :command W w
 :command WQ wq
 :command Wq wq
+:command Xmllint %!xmllint --format %
 
 " NERDTree
 "autocmd vimenter * NERDTree " Auto-start NERDtree
