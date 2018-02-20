@@ -28,6 +28,7 @@ Plug 'slim-template/vim-slim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tikhomirov/vim-glsl'
 Plug 'timcharper/textile.vim'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 
