@@ -98,7 +98,7 @@ let g:NERDTreeWinSize = 36
 " ctrl-p
 autocmd vimenter * wincmd p
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$|bower_components\|dist\|node_modules\|vendor',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$|bower_components\|coverage\|dist\|node_modules\|vendor',
   \ 'file': '\.exe$\|\.so$\|\.dat$|\.png$|\.jpg$|\.jpeg$|\.svg$|\.gif$|\.flv$|\.webm$'
   \ }
 
