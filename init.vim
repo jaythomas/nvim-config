@@ -101,7 +101,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$|bower_components\|coverage\|dist\|node_modules\|vendor',
   \ 'file': '\.exe$\|\.so$\|\.dat$|\.png$|\.jpg$|\.jpeg$|\.svg$|\.gif$|\.flv$|\.webm$'
   \ }
-
+let g:ctrlp_show_hidden = 1
 
 "ALE
 let g:ale_linters = {
