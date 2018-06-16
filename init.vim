@@ -125,7 +125,7 @@ let g:vim_markdown_folding_disabled=1
 colorscheme grb256
 
 hi ErrorMsg   ctermfg=red   ctermbg=none  guifg=White guibg=cyan gui=None
-hi WarningMsg ctermfg=white ctermbg=cyan  guifg=White guibg=cyan gui=None
+hi WarningMsg ctermfg=cyan  ctermbg=none  guifg=White guibg=cyan gui=None
 hi DiffAdd    ctermfg=green ctermbg=none
 hi DiffChange ctermfg=blue  ctermbg=none
 hi DiffDelete ctermfg=red   ctermbg=none
