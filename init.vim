@@ -9,7 +9,6 @@ Plug 'elmcast/elm-vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'gregsexton/MatchTag'
 Plug 'groenewege/vim-less'
-Plug 'iCyMind/NeoSolarized' " True color theme
 Plug 'jaythomas/vim-yaml'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kylef/apiblueprint.vim'
@@ -21,6 +20,7 @@ Plug 'ntpeters/vim-better-whitespace'
 "Plug 'othree/yajs.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'posva/vim-vue'
+Plug 'romainl/flattened' " True color scheme
 Plug 'ruanyl/coverage.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -118,16 +118,17 @@ let g:elm_syntastic_show_warnings = 1
 let g:vim_markdown_folding_disabled=1
 
 " Set a 24-bit color scheme
-"set background=dark
-"colorscheme NeoSolarized
+"colorscheme flattened_dark
+"set termguicolors
 
 " 256-color scheme
 colorscheme grb256
 
-hi ErrorMsg   ctermfg=red   ctermbg=none  guifg=White guibg=cyan gui=None
-hi WarningMsg ctermfg=cyan  ctermbg=none  guifg=White guibg=cyan gui=None
-hi DiffAdd    ctermfg=green ctermbg=none
-hi DiffChange ctermfg=blue  ctermbg=none
-hi DiffDelete ctermfg=red   ctermbg=none
-hi SpellBad   ctermfg=red   ctermbg=none
-hi SellCap    ctermfg=cyan  ctermbg=none
+hi ErrorMsg   ctermfg=red     ctermbg=none  guifg=red      guibg=none  gui=none
+hi WarningMsg ctermfg=yellow  ctermbg=none  guifg=yellow   guibg=none  gui=none
+hi DiffAdd    ctermfg=green   ctermbg=none  guifg=green    guibg=none  gui=none
+hi DiffChange ctermfg=blue    ctermbg=none  guifg=blue     guibg=none  gui=none
+hi DiffDelete ctermfg=red     ctermbg=none  guifg=red      guibg=none  gui=none
+hi SpellBad   ctermfg=red     ctermbg=none  guifg=red      guibg=none  gui=none
+hi SpellCap   ctermfg=red     ctermbg=none  guifg=red      guibg=none  gui=none
+hi SpellRare  ctermfg=red     ctermbg=none  guifg=red      guibg=none  gui=none
