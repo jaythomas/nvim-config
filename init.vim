@@ -63,6 +63,7 @@ set foldlevel=5
 autocmd BufNewFile,BufRead *.slim set syntax=slim|set ft=slim
 
 " Maps
+map <C-t> :NERDTreeToggle<CR>
 " Keys to delete text (as opposed to cutting with D)
 nmap X "_d
 nmap XX "_dd
