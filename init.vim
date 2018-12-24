@@ -7,7 +7,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'flazz/vim-colorschemes'
-Plug 'gregsexton/MatchTag'
+Plug 'gisraptor/vim-lilypond-integrator'
+"Plug 'gregsexton/MatchTag'
 Plug 'groenewege/vim-less'
 Plug 'jaythomas/vim-yaml'
 Plug 'kchmck/vim-coffee-script'
@@ -17,7 +18,7 @@ Plug 'leafo/moonscript-vim'
 Plug 'mattn/emmet-vim'
 Plug 'millermedeiros/vim-esformatter'
 Plug 'ntpeters/vim-better-whitespace'
-"Plug 'othree/yajs.vim'
+Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
 Plug 'posva/vim-vue'
 Plug 'romainl/flattened' " True color scheme
@@ -72,6 +73,12 @@ vmap x "_d
 " have x (removes single character) not go into the default registry
 nnoremap x "_x
 
+" Insert a single character
+noremap f i <Esc>r
+
+" lilypond compile
+noremap <leader>r :!lilypond %<Enter><Enter>
+
 " Halve/double whitespave indentation
 nnoremap <silent> <leader>>    :call Preserve('%s/^\s*/&&/')<cr>
 nnoremap <silent> <leader><lt> :call Preserve('%s/^\(\s*\)\1/\1/')<cr>
@@ -94,7 +101,7 @@ endfunction
 " NERDTree
 "autocmd vimenter * NERDTree " Auto-start NERDtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Auto-close vim if NERDTree's buffer is the only one open
-let g:NERDTreeWinSize = 36
+let g:NERDTreeWinSize = 48
 
 " ctrl-p
 autocmd vimenter * wincmd p
