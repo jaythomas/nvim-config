@@ -11,6 +11,7 @@ Plug 'gisraptor/vim-lilypond-integrator'
 "Plug 'gregsexton/MatchTag'
 Plug 'groenewege/vim-less'
 Plug 'jaythomas/vim-yaml'
+Plug 'jparise/vim-graphql'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kburdett/vim-nuuid'
 Plug 'kylef/apiblueprint.vim'
@@ -34,6 +35,7 @@ Plug 'timcharper/textile.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
+Plug 'webastien/vim-ctags'
 
 call plug#end()
 
@@ -108,14 +110,15 @@ let g:NERDTreeWinSize = 48
 " ctrl-p
 autocmd vimenter * wincmd p
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$|bower_components\|coverage\|dist\|node_modules\|vendor',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$|bower_components\|coverage\|dist\|jsdocs\|node_modules\|tmp\|vendor',
   \ 'file': '\.exe$\|\.so$\|\.dat$|\.png$|\.jpg$|\.jpeg$|\.svg$|\.gif$|\.flv$|\.webm$'
   \ }
 let g:ctrlp_show_hidden = 1
 
 "ALE
 let g:ale_linters = {
-  \ 'javascript': ['eslint']
+  \ 'javascript': ['eslint'],
+  \ 'scss': ['stylelint']
   \ }
 let g:coverage_json_report_path = 'coverage/coverage-final.json'
 
