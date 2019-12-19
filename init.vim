@@ -8,7 +8,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'elmcast/elm-vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'gisraptor/vim-lilypond-integrator'
-"Plug 'gregsexton/MatchTag'
+"Plug 'gregsexton/MatchTag' " Doesn't work half the time
 Plug 'groenewege/vim-less'
 Plug 'jaythomas/vim-yaml'
 Plug 'jparise/vim-graphql'
@@ -26,12 +26,12 @@ Plug 'plasticboy/vim-markdown'
 Plug 'posva/vim-vue'
 Plug 'romainl/flattened' " True color scheme
 Plug 'ruanyl/coverage.vim'
-Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tikhomirov/vim-glsl'
 Plug 'timcharper/textile.vim'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
@@ -58,7 +58,12 @@ set tabstop=2
 "set termguicolors
 set shiftwidth=2
 
+" Backspace to insert
 nnoremap <BS> i
+" Copy text to system clipboard
+vnoremap  <leader>y  "+y
+" Paste (though shift+ctrl+v does the job too)
+nnoremap <leader>p "+p
 
 " Folding
 set foldmethod=syntax "fold based on indent
@@ -116,10 +121,19 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_show_hidden = 1
 
 "ALE
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
+\   'scss': ['prettier'],
+\   'vue': ['prettier'],
+\}
 let g:ale_linters = {
   \ 'javascript': ['eslint'],
   \ 'scss': ['stylelint']
   \ }
+let g:ale_fix_on_save = 1
+
+" coverage plugin
 let g:coverage_json_report_path = 'coverage/coverage-final.json'
 
 " vim-elm
@@ -129,6 +143,9 @@ let g:elm_syntastic_show_warnings = 1
 
 " vim-markdown
 let g:vim_markdown_folding_disabled=1
+
+" vim-vue
+let g:vue_pre_processors = 'detect_on_enter'
 
 " Set a 24-bit color scheme
 "colorscheme flattened_dark
