@@ -5,7 +5,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
-Plug 'elmcast/elm-vim'
+Plug 'elzr/vim-json'
 Plug 'flazz/vim-colorschemes'
 Plug 'gisraptor/vim-lilypond-integrator'
 "Plug 'gregsexton/MatchTag' " Doesn't work half the time
@@ -24,6 +24,10 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
 Plug 'posva/vim-vue'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
+  \ }
 Plug 'romainl/flattened' " True color scheme
 Plug 'ruanyl/coverage.vim'
 Plug 'scrooloose/nerdtree'
@@ -121,25 +125,17 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_show_hidden = 1
 
 "ALE
-let g:ale_fixers = {
-\   'javascript': ['prettier'],
-\   'css': ['prettier'],
-\   'scss': ['prettier'],
-\   'vue': ['prettier'],
-\}
 let g:ale_linters = {
   \ 'javascript': ['eslint'],
   \ 'scss': ['stylelint']
   \ }
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 
-" coverage plugin
+" coverage.vim
 let g:coverage_json_report_path = 'coverage/coverage-final.json'
 
-" vim-elm
-let g:elm_format_autosave = 1
-let g:elm_format_fail_silently = 1
-let g:elm_syntastic_show_warnings = 1
+" vim-json
+let g:vim_json_syntax_conceal = 0
 
 " vim-markdown
 let g:vim_markdown_folding_disabled=1
