@@ -74,3 +74,4 @@ webpack
 jQuery
 toolset
 RESTful
+debounce

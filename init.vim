@@ -1,6 +1,7 @@
 " set the runtime path to include Vundle and initialize
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'editorconfig/editorconfig-vim'
@@ -38,6 +39,7 @@ Plug 'timcharper/textile.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
+Plug 'vhda/verilog_systemverilog.vim'
 Plug 'w0rp/ale'
 Plug 'webastien/vim-ctags'
 
