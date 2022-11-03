@@ -55,7 +55,7 @@ set expandtab
 set ignorecase
 set nohlsearch
 set noincsearch
-set mouse-=a
+set mouse=
 set ruler
 set relativenumber
 set scrolloff=12
@@ -118,6 +118,7 @@ endfunction
 "autocmd vimenter * NERDTree " Auto-start NERDtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Auto-close vim if NERDTree's buffer is the only one open
 let g:NERDTreeWinSize = 48
+let g:NERDTreeMinimalMenu=1
 
 " ctrl-p
 autocmd vimenter * wincmd p
