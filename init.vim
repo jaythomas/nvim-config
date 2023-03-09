@@ -22,6 +22,7 @@ Plug 'lilydjwg/colorizer'
 Plug 'leafgarland/typescript-vim'
 Plug 'leafo/moonscript-vim'
 Plug 'mattn/emmet-vim'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
@@ -51,6 +52,7 @@ syntax on
 
 " Good ol settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set cmdheight=0
 set expandtab
 set ignorecase
 set nohlsearch
@@ -64,6 +66,22 @@ set smartindent
 set tabstop=2
 "set termguicolors
 set shiftwidth=2
+
+" Move selected lines up/down
+" In normal mode or in insert mode, press Alt-j to move the current
+" line down, or press Alt-k to move the current line up.
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-Down> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+nnoremap <A-Up> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-Down> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+inoremap <A-Up> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-Down> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+vnoremap <A-Up> :m '<-2<CR>gv=gv
 
 " Backspace to insert
 nnoremap <BS> i
