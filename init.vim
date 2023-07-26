@@ -52,9 +52,10 @@ syntax on
 
 " Good ol settings
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set cmdheight=0
+set cmdheight=1
 set expandtab
 set ignorecase
+set list " show tab characters
 set nohlsearch
 set noincsearch
 set mouse=
