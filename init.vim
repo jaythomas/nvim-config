@@ -68,6 +68,10 @@ set tabstop=2
 "set termguicolors
 set shiftwidth=2
 
+"vim.diagnostic.config({
+"  virtual_text = false
+"})
+
 " Move selected lines up/down
 " In normal mode or in insert mode, press Alt-j to move the current
 " line down, or press Alt-k to move the current line up.
@@ -149,6 +153,7 @@ let g:ctrlp_show_hidden = 1
 
 "ALE
 let g:ale_linters = {
+  \ 'html': ['eslint'],
   \ 'javascript': ['eslint'],
   \ 'scss': ['stylelint']
   \ }
