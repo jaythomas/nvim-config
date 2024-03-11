@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'derekwyatt/vim-scala' " required for nvim-metals
 Plug 'digitaltoad/vim-pug'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-lang/vim-elixir'
@@ -24,6 +25,7 @@ Plug 'leafo/moonscript-vim'
 Plug 'mattn/emmet-vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'ntpeters/vim-better-whitespace'
+"Plug 'nvim-lua/plenary.nvim' " Dependency of nvim-metals
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
 Plug 'posva/vim-vue'
@@ -33,6 +35,8 @@ Plug 'prettier/vim-prettier', {
   \ }
 Plug 'romainl/flattened' " True color scheme
 Plug 'ruanyl/coverage.vim'
+Plug 'rust-lang/rust.vim'
+"Plug 'scalameta/nvim-metals'
 Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
 Plug 'terryma/vim-multiple-cursors'
@@ -68,9 +72,13 @@ set tabstop=2
 "set termguicolors
 set shiftwidth=2
 
-"vim.diagnostic.config({
-"  virtual_text = false
-"})
+" Custom statusline
+set statusline =%4*\ [%n]\ %*      " buffer number
+set statusline +=%4*\ %<%F%*       " full path
+set statusline +=%2*%m%*           " modified flag
+set statusline +=%3*%=%5l%*        " current line
+set statusline +=%1*/%L%*          " total lines
+set statusline +=%3*%4v\ %*        " virtual column number
 
 " Move selected lines up/down
 " In normal mode or in insert mode, press Alt-j to move the current
